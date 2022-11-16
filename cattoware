@@ -1,9 +1,9 @@
 ---// Cattoware UI Library
-local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/bloodball/-back-ups-for-libs/main/cat", true))() --you can go into the github link and copy all of it and modify it for yourself.
-local Window = Library:CreateWindow("Cattoware", Vector2.new(492, 598), Enum.KeyCode.Insert) --you can change your UI keybind
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/bloodball/-back-ups-for-libs/main/cat", true))()
+local Window = Library:CreateWindow("Cattoware", Vector2.new(492, 598), Enum.KeyCode.Insert)
 
 local AimingTab = Window:CreateTab("UwU")
-local testSection = AimingTab:CreateSector("Players", "left")  --you can  change the section code, for example "testsection" can be changed to "FunnyCoolSection" etc.
+local testSection = AimingTab:CreateSector("Players", "left")
 
 testSection:AddToggle("Enable", false, function(first)
     print("ejejejejejeje")
