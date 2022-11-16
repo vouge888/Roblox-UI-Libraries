@@ -1,0 +1,50 @@
+---// Library
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+
+---// Window
+local Window = Library.CreateLib("Kittyhack", "DarkTheme") --[[DarkTheme, LightTheme, GrapeTheme, BloodTheme, Ocean, Midnight, Sentinel, Synapse]]--
+
+---// Tab 1
+local Aimbot = Window:NewTab("Aimbot")
+local SilentAim = Aimbot:NewSection("Silent Aim")
+
+SilentAim:NewToggle("Enable", "", function(state)
+    if state then
+        print("Toggle On")
+    else
+        print("Toggle Off")
+    end
+end)
+
+SilentAim:NewSlider("FOV", "", 500, 0, function(s)
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
+end)
+
+SilentAim:NewTextBox("Hack", "", function(txt)
+	print(txt)
+end)
+
+SilentAim:NewKeybind("Keybind", "", Enum.KeyCode.E, function()
+	print("You just clicked the bind")
+end)
+
+SilentAim:NewDropdown("Hitboxes", "", {"Head", "Torso", "Arms", "Legs"}, function(currentOption)
+    print(currentOption)
+end)
+
+SilentAim:NewColorPicker("Lock Color", "", Color3.fromRGB(255,255,255), function(color)
+    print(color)
+end)
+
+local fovshow = SilentAim:NewToggle("Show FOV", "", function(state)
+    if state then
+        print("Toggle On")
+    else
+        print("Toggle Off")
+    end
+end)
+
+fovshow:NewColorPicker("FOV Color", "", Color3.fromRGB(255,255,255), function(color)
+    print(color)
+end)
+
