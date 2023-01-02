@@ -4837,7 +4837,7 @@ function library:CreateSettingsTab(menu)
     for _,v in next, library.themes do
         table.insert(themeStrings, v.name)
     end
-    local themeSection = settingsTab:AddSection('Theme', 1);
+--[[    local themeSection = settingsTab:AddSection('Theme', 1);
     local setByPreset = false
 
     themeSection:AddList({text = 'Presets', flag = 'preset_theme', values = themeStrings, callback = function(newTheme)
@@ -4865,7 +4865,7 @@ function library:CreateSettingsTab(menu)
                 library.options.preset_theme:Select('Custom')
             end
         end});
-    end
+    end]]
 
     return settingsTab;
 end
